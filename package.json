@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "http-server ./public",
-    "start": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+    "start": "tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./public/output.css",
+    "deploy": "echo deploy"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "gh-pages": "^6.1.1",
     "http-server": "^14.1.1",
     "tailwindcss": "^3.4.1"
   }
