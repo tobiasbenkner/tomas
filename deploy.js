@@ -9,6 +9,10 @@ ghpages.publish(
     // cname: 'custom-domain.com'
   },
   function (err) {
-    console.error(err);
+    if (!err) {
+      console.log("done");
+    } else {
+      console.error(err);
+    }
   }
 );
