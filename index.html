@@ -157,7 +157,6 @@
           <p>
             Ofrezco también ayuda/asesoramiento profesional a la hora de
             componer/arreglar y/o grabar tus temas.
-            
           </p>
           <img src="assets/img/tomas.jpg" class="rounded-lg max-w-sm" />
           <img src="assets/img/services.jpg" class="rounded-lg max-w-sm" />
@@ -176,5 +175,22 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function stopOtherVideos(currentVideo) {
+        var videos = document.querySelectorAll("video");
+        videos.forEach(function (video) {
+          if (video !== currentVideo && !video.paused) {
+            video.pause();
+          }
+        });
+      }
+      var videoElements = document.querySelectorAll("video");
+      videoElements.forEach(function (video) {
+        video.addEventListener("play", function () {
+          stopOtherVideos(this);
+        });
+      });
+    </script>
   </body>
 </html>
